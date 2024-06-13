@@ -19,11 +19,7 @@ public class FarmerService {
         return farmerRepository.findById(id);
     }
 
-
-    public Farmer save(Farmer farmer) {
-        return farmerRepository.save(farmer);
+    public Optional<Farmer> findByEmail(String email) {
+        return farmerRepository.findByEmail(email);
     }
-
-
-
 }
