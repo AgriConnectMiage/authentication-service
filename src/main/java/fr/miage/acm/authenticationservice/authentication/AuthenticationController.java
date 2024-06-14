@@ -15,7 +15,7 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationService authenticationService;
 
-    @PostMapping("/login")
+    @PostMapping()
     public ResponseEntity<String> authenticate(@RequestBody CredentialsBody credentials) {
         boolean isAuthenticated = authenticationService.authenticate(credentials);
         if (isAuthenticated) {
